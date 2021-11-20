@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      initialRoute: LightScreen.id,
+      initialRoute: ControlPanelScreen.id,
       routes: {
         ControlPanelScreen.id: (context) => ControlPanelScreen(),
         LightScreen.id: (context) => LightScreen(),

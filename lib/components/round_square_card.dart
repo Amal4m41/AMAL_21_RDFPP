@@ -1,3 +1,4 @@
+import 'package:amal_21_rdfpp/utils/constants.dart';
 import 'package:amal_21_rdfpp/utils/widget_functions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ class RoundSquareCard extends StatelessWidget {
           addVerticalSpace(8),
           Text(
             subTitle,
-            style: TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
+            style: kSubTitleTextStyle,
           ),
         ],
       ),

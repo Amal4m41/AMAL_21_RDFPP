@@ -1,4 +1,5 @@
 import 'package:amal_21_rdfpp/components/round_square_card.dart';
+import 'package:amal_21_rdfpp/screens/light_screen.dart';
 import 'package:amal_21_rdfpp/utils/constants.dart';
 import 'package:amal_21_rdfpp/utils/widget_functions.dart';
 import 'package:flutter/cupertino.dart';
@@ -80,10 +81,16 @@ class ControlPanelScreen extends StatelessWidget {
                         crossAxisSpacing: 20,
                         mainAxisSpacing: 18,
                         children: controlPanelGridData
-                            .map((item) => RoundSquareCard(
-                                  imagePath: item['image'] as String,
-                                  mainTitle: item['mainTitle'] as String,
-                                  subTitle: item['subTitle'] as String,
+                            .map((item) => InkWell(
+                                  onTap: () {
+                                    Navigator.pushNamed(
+                                        context, LightScreen.id);
+                                  },
+                                  child: RoundSquareCard(
+                                    imagePath: item['image'] as String,
+                                    mainTitle: item['mainTitle'] as String,
+                                    subTitle: item['subTitle'] as String,
+                                  ),
                                 ))
                             .toList(),
                       ),
