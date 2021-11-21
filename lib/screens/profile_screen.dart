@@ -37,7 +37,7 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
               child: Column(
                 children: [
                   addVerticalSpace(20),
@@ -52,7 +52,7 @@ class ProfileScreen extends StatelessWidget {
                   const Text('Bio', style: kBoldFont),
                   addVerticalSpace(10),
                   const Text(
-                    "I'm final year Computer Science student in Symbiosis Institute of Computer Science and Research, Pune. \n"
+                    "I'm a final year Computer Science student in Symbiosis Institute of Computer Science and Research, Pune. \n"
                     "I'm a passionate Software Developer with experience in Machine Learning, Blockchain Development, Game Development, "
                     "Android Development, Computer Vision and Flutter Development.",
                     style: TextStyle(fontSize: 14),

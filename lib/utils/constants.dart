@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+//These constant lists/maps try to mimic the data that's retrieved from an api or local db query.
+
 const List<Map<String, String>> controlPanelGridData = [
   {'image': 'assets/bed.svg', 'mainTitle': 'Bed Room', 'subTitle': '4 Lights'},
   {
@@ -60,8 +62,15 @@ const List<Map<String, String>> scenesList = [
 
 const TextStyle kSubTitleTextStyle =
     TextStyle(color: Colors.orange, fontWeight: FontWeight.bold);
+
 const TextStyle kBoldFont = TextStyle(
     color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 20);
+
+const TextStyle kLightsScreenTitleStyle = TextStyle(
+    letterSpacing: 2,
+    color: Colors.white,
+    fontWeight: FontWeight.w800,
+    fontSize: 28);
 
 const List<int> listOfColors = [
   0xffFF9B9B,

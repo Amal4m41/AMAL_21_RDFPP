@@ -5,9 +5,11 @@ import 'package:flutter/cupertino.dart';
 class LightScreenProvider extends ChangeNotifier {
   double _sliderValue = 0;
   Color _lightColor = Color(0xffFFD139).withOpacity(0);
+  double _animationValue = 0;
 
   double get sliderValue => _sliderValue;
   Color get lightColor => _lightColor;
+  double get animationValue => _animationValue;
 
   void setSliderValue(double value) {
     _sliderValue = value;
@@ -19,5 +21,10 @@ class LightScreenProvider extends ChangeNotifier {
   void setLightColor(Color color) {
     _lightColor = color.withOpacity(_sliderValue / 10);
     notifyListeners();
+  }
+
+  void setAnimationValue(double value) {
+    _animationValue = value;
+    setSliderValue(value * 10);
   }
 }

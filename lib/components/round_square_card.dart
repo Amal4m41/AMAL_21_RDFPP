@@ -18,7 +18,7 @@ class RoundSquareCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -27,7 +27,7 @@ class RoundSquareCard extends StatelessWidget {
               blurRadius: 10,
             )
           ],
-          borderRadius: BorderRadius.all(Radius.circular(25))),
+          borderRadius: const BorderRadius.all(Radius.circular(25))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -35,7 +35,7 @@ class RoundSquareCard extends StatelessWidget {
           addVerticalSpace(18),
           Text(
             mainTitle,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
           ),
           addVerticalSpace(8),

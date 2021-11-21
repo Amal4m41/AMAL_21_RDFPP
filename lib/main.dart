@@ -17,22 +17,42 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Assignment',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
       initialRoute: ControlPanelScreen.id,
       routes: {
-        ControlPanelScreen.id: (context) => ControlPanelScreen(),
-        LightScreen.id: (context) => LightScreen(),
-        ProfileScreen.id: (context) => ProfileScreen(),
+        ControlPanelScreen.id: (context) => const ControlPanelScreen(),
+        ProfileScreen.id: (context) => const ProfileScreen(),
+      },
+      //For named routes with arguments
+      onGenerateRoute: (settings) {
+        // If you push the PassArguments route
+        if (settings.name == LightScreen.id) {
+          // Cast the arguments to the correct
+          // type: ScreenArguments.
+          final args = settings.arguments as LightScreenArguments;
+          // print('ARGS VALUE: $args');
+          // Then, extract the required data from
+          // the arguments and pass the data to the
+          // correct screen.
+          return MaterialPageRoute(
+            builder: (context) {
+              return LightScreen(
+                roomName: args.roomName,
+                numberofLights: args.numberofLights,
+              );
+            },
+          );
+        }
+        // The code only supports
+        // PassArgumentsScreen.routeName right now.
+        // Other values need to be implemented if we
+        // add them. The assertion here will help remind
+        // us of that higher up in the call stack, since
+        // this assertion would otherwise fire somewhere
+        // in the framework.
+        assert(false, 'Need to implement ${settings.name}');
+        return null;
       },
     );
   }
