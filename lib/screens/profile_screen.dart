@@ -24,7 +24,7 @@ class ProfileScreen extends StatelessWidget {
                   height: 120,
                   decoration: BoxDecoration(
                       color: Colors.blue.shade800,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(300),
                           bottomRight: Radius.circular(300))),
                 ),
@@ -41,7 +41,7 @@ class ProfileScreen extends StatelessWidget {
               child: Column(
                 children: [
                   addVerticalSpace(20),
-                  Text(
+                  const Text(
                     "Amal Sunil Pillai",
                     style: TextStyle(
                         color: Colors.black,
@@ -49,9 +49,9 @@ class ProfileScreen extends StatelessWidget {
                         fontSize: 30),
                   ),
                   addVerticalSpace(25),
-                  Text('Bio', style: kBoldFont),
+                  const Text('Bio', style: kBoldFont),
                   addVerticalSpace(10),
-                  Text(
+                  const Text(
                     "I'm final year Computer Science student in Symbiosis Institute of Computer Science and Research, Pune. \n"
                     "I'm a passionate Software Developer with experience in Machine Learning, Blockchain Development, Game Development, "
                     "Android Development, Computer Vision and Flutter Development.",
@@ -59,15 +59,15 @@ class ProfileScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   addVerticalSpace(20),
-                  Text('Contact Number :', style: kBoldFont),
+                  const Text('Contact Number :', style: kBoldFont),
                   addVerticalSpace(10),
-                  Text('+91 7907361102'),
-                  Text('+91 7620035183'),
-                  Text('+971 55 9221517'),
+                  const Text('+91 7907361102'),
+                  const Text('+91 7620035183'),
+                  const Text('+971 55 9221517'),
                   addVerticalSpace(20),
-                  Text('Email :', style: kBoldFont),
+                  const Text('Email :', style: kBoldFont),
                   addVerticalSpace(10),
-                  Text('amalsunil117@gmail.com'),
+                  const Text('amalsunil117@gmail.com'),
                 ],
               ),
             ),

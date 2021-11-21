@@ -1,3 +1,5 @@
+import 'package:amal_21_rdfpp/components/bottom_nav_bar.dart';
+import 'package:amal_21_rdfpp/components/custom_bottom_sheet.dart';
 import 'package:amal_21_rdfpp/components/round_square_card.dart';
 import 'package:amal_21_rdfpp/screens/light_screen.dart';
 import 'package:amal_21_rdfpp/screens/profile_screen.dart';
@@ -28,7 +30,7 @@ class ControlPanelScreen extends StatelessWidget {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         'Control',
                         style: TextStyle(
@@ -60,15 +62,7 @@ class ControlPanelScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Container(
-                padding: EdgeInsets.all(20),
-                decoration: const BoxDecoration(
-                  color: Color(0xf1F6F8FB),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(35),
-                    topRight: Radius.circular(35),
-                  ),
-                ),
+              child: CustomBottomSheet(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -108,18 +102,7 @@ class ControlPanelScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        color: Colors.white,
-        padding: EdgeInsets.all(15),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            SvgPicture.asset('assets/bulb.svg'),
-            SvgPicture.asset('assets/Icon feather-home.svg'),
-            SvgPicture.asset('assets/Icon feather-settings.svg'),
-          ],
-        ),
-      ),
+      bottomNavigationBar: BottomNavBar(),
       // bottomNavigationBar: BottomNavigationBar(
       //   showSelectedLabels: false,
       //   showUnselectedLabels: false,
