@@ -1,5 +1,6 @@
 import 'package:amal_21_rdfpp/screens/control_panel_screen.dart';
 import 'package:amal_21_rdfpp/screens/light_screen.dart';
+import 'package:amal_21_rdfpp/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       routes: {
         ControlPanelScreen.id: (context) => ControlPanelScreen(),
         LightScreen.id: (context) => LightScreen(),
+        ProfileScreen.id: (context) => ProfileScreen(),
       },
     );
   }

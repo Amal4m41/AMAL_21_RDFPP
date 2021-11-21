@@ -1,5 +1,6 @@
 import 'package:amal_21_rdfpp/components/round_square_card.dart';
 import 'package:amal_21_rdfpp/screens/light_screen.dart';
+import 'package:amal_21_rdfpp/screens/profile_screen.dart';
 import 'package:amal_21_rdfpp/utils/constants.dart';
 import 'package:amal_21_rdfpp/utils/widget_functions.dart';
 import 'package:flutter/cupertino.dart';
@@ -47,8 +48,13 @@ class ControlPanelScreen extends StatelessWidget {
                     ],
                   ),
                   // SvgPicture.asset('assets/bed.svg'),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, ProfileScreen.id);
+                    },
+                    child: CircleAvatar(
+                      backgroundImage: NetworkImage(kProfileImageUrl),
+                    ),
                   )
                 ],
               ),

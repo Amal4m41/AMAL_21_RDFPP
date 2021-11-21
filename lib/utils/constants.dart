@@ -46,30 +46,22 @@ const List<Map<String, String>> listViewLightItems = [
   },
 ];
 
-
 //TODO: to add color for the scenes and diplay it's grid.
 const List<Map<String, String>> scenesList = [
   {
     'image': 'assets/surface1.svg',
     'mainTitle': 'Birthday',
-    'color':
+    'color': '0xffFF9C9B'
   },
-  {
-    'image': 'assets/surface1.svg',
-    'mainTitle': 'Party',
-  },
-  {
-    'image': 'assets/surface1.svg',
-    'mainTitle': 'Relax',
-  },
-  {
-    'image': 'assets/surface1.svg',
-    'mainTitle': 'Fun',
-  },
+  {'image': 'assets/surface1.svg', 'mainTitle': 'Party', 'color': '0xffA893EB'},
+  {'image': 'assets/surface1.svg', 'mainTitle': 'Relax', 'color': '0xff93CAEB'},
+  {'image': 'assets/surface1.svg', 'mainTitle': 'Fun', 'color': '0xff8DDE94'},
 ];
 
 const TextStyle kSubTitleTextStyle =
     TextStyle(color: Colors.orange, fontWeight: FontWeight.bold);
+const TextStyle kBoldFont = TextStyle(
+    color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 20);
 
 const List<int> listOfColors = [
   0xffFF9B9B,
@@ -77,5 +69,8 @@ const List<int> listOfColors = [
   0xff94CAEB,
   0xffA594EB,
   0xffDE94EB,
-  0xffEBD094
+  0xffEBD094,
 ];
+
+const String kProfileImageUrl =
+    'https://drive.google.com/uc?id=1nBqyBBm6mQIUyQUxI_rzjm0P_SV89r74';

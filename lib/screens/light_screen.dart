@@ -118,6 +118,7 @@ class LightScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  addVerticalSpace(10),
                   Text(
                     "Intensity",
                     style: TextStyle(
@@ -133,6 +134,7 @@ class LightScreen extends StatelessWidget {
                       SvgPicture.asset('assets/solution.svg'),
                     ],
                   ),
+                  addVerticalSpace(20),
                   Text(
                     "Colors",
                     style: TextStyle(
@@ -141,6 +143,7 @@ class LightScreen extends StatelessWidget {
                         fontWeight: FontWeight.w700),
                   ),
                   Expanded(
+                    flex: 1,
                     child: HorizontalScrollList(
                       numberOfItems: listOfColorItems.length,
                       spaceBetween: 10,
@@ -149,6 +152,7 @@ class LightScreen extends StatelessWidget {
                           listOfColorItems[index],
                     ),
                   ),
+                  addVerticalSpace(20),
                   Text(
                     "Scenes",
                     style: TextStyle(
@@ -156,18 +160,29 @@ class LightScreen extends StatelessWidget {
                         fontSize: 18,
                         fontWeight: FontWeight.w700),
                   ),
+                  addVerticalSpace(20),
                   Expanded(
+                    flex: 3,
                     child: GridView.count(
-                        padding: EdgeInsets.symmetric(vertical: 5),
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 20,
-                        mainAxisSpacing: 18,
-                        children: scenesList.map((item) => RectangularRoundItem(
-                            bgColor: bgColor,
-                            title: title,
-                            icon: icon,
-                            textColor: textColor))),
+                      padding: EdgeInsets.symmetric(vertical: 5),
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 18,
+                      childAspectRatio: 2.5,
+                      children: scenesList
+                          .map(
+                            (item) => RectangularRoundItem(
+                                bgColor:
+                                    Color(int.parse(item['color'] as String)),
+                                title: item['mainTitle'] as String,
+                                icon: SvgPicture.asset(item['image'] as String,
+                                    color: Colors.white),
+                                textColor: Colors.white),
+                          )
+                          .toList(),
+                    ),
                   ),
+                  addVerticalSpace(40),
                 ],
               ),
             ),
